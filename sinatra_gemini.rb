@@ -8,14 +8,12 @@ class SinatraGemini
   def run(task)
     gemini = Gemini.new(
       credentials: {
-        # service: 'vertex-ai-api',
         service: 'generative-language-api',
         api_key: ENV['GEMINI_API_KEY'],
         region: 'us-central1'
       },
       options: {
         model: 'gemini-1.5-flash-002'
-        # model: 'gemini-pro'
       }
     )
 
